@@ -1,0 +1,25 @@
+{
+  "name": "line",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image"
+  ],
+  "author": "zhendongren",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.4.1",
+    "@koa/multer": "^3.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "multer": "^1.4.5-lts.1",
+    "sqip": "^0.3.3"
+  }
+}
