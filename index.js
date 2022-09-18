@@ -33,12 +33,12 @@ router.post('/line', upload.single('file'), async ctx => {
         ctx.body = { code: 1, data: {}, message: 'count太大了，最多2000' }
     }
     const { final_svg, svg_base64encoded, img_dimensions } = sqip({
-        filename: path.join(__dirname, '/static/base/', ctx.request.file.filename),
+        filename: path.join(__dirname, '/static/', ctx.request.file.filename),
         numberOfPrimitives: ctx.request.query.count || 200, // 生成 200 个轮廓
         blur: 0
     })
 
-    fs.unlink(path.join(__dirname, '/static/base/', ctx.request.file.filename), (err) => {
+    fs.unlink(path.join(__dirname, '/static/', ctx.request.file.filename), (err) => {
         console.log(err);
     });
 
